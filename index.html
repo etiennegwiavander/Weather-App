@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>weather app</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="container">
+
+            <!-- <h1 class="title">My weather app </h1> -->
+            <br>
+
+            <!-- input section -->
+
+            <form class="input-container" id="input-container">
+
+                <input required class="inputValue" type="text" placeholder="Enter city name">
+                <button class="btn"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                        </path>
+                    </svg></button>
+
+            </form>
+
+            <!-- output section -->
+            <div class="loader"></div>
+            <div>
+                <p id="err"></p>
+            </div>
+            <div class="outputContainer">
+
+                <div class="current">
+                    <h1 class="cityName"></h1>
+
+                    <h1 class="temp"></h1>
+
+                    <div class="cmIcon">
+                        <p class="comment"></p>
+                        <img src="" class="icon">
+                        <p class="icon"></p>
+                    </div>
+
+                    <div class="conditions">
+                        <p class="humidity"></p>
+                        <p class="wind"></p>
+                        <p class="precip"></p>
+                    </div>
+
+                    <div class="update">
+                        <p class="dayHour"></p>
+                        <button class="reloadPage">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M909.1 209.3l-56.4 44.1C775.8 155.1 656.2 92 521.9 92 290 92 102.3 279.5 102 511.5 101.7 743.7 289.8 932 521.9 932c181.3 0 335.8-115 394.6-276.1 1.5-4.2-.7-8.9-4.9-10.3l-56.7-19.5a8 8 0 0 0-10.1 4.8c-1.8 5-3.8 10-5.9 14.9-17.3 41-42.1 77.8-73.7 109.4A344.77 344.77 0 0 1 655.9 829c-42.3 17.9-87.4 27-133.8 27-46.5 0-91.5-9.1-133.8-27A341.5 341.5 0 0 1 279 755.2a342.16 342.16 0 0 1-73.7-109.4c-17.9-42.4-27-87.4-27-133.9s9.1-91.5 27-133.9c17.3-41 42.1-77.8 73.7-109.4 31.6-31.6 68.4-56.4 109.3-73.8 42.3-17.9 87.4-27 133.8-27 46.5 0 91.5 9.1 133.8 27a341.5 341.5 0 0 1 109.3 73.8c9.9 9.9 19.2 20.4 27.8 31.4l-60.2 47a8 8 0 0 0 3 14.1l175.6 43c5 1.2 9.9-2.6 9.9-7.7l.8-180.9c-.1-6.6-7.8-10.3-13-6.2z">
+                                </path>
+                            </svg>
+                        </button>
+
+                    </div>
+                    <!-- <hr> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="forcast-container">
+
+      <H2 class="forcast-header">Weather Forcast for the Next 7 days</H2>  
+
+        <table id="forcast" class="forcast">
+            <!-- <tr>
+                <th>Day</th>
+                <th>comment</th>
+                <th>Icon</th>
+                <th>Temp range</th>
+                
+            </tr> -->
+            <tbody class="next-days" id="next-days">
+
+            </tbody>
+            
+        </table>
+
+    </div>
+</body>
+
+</html>
